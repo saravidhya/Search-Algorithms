@@ -18,31 +18,93 @@ To write a program to perform linear search and binary search using python progr
 6.	Repeat steps 2 to 5 until low meets high
 ## Program:
 i)	#Use a linear search method to match the item in a list.
-```
 
+```
+#DEVELOPED BY : Vidhiya lakshmi S
+#REG NO:212223230238
+#Use a linear search method to match the item in a list.
+def linearsearch(array, n, k):
+    for i in range(0, n):
+        if (array[i] == k):
+            return i
+    return -1
+    
+array= eval(input())
+k= eval(input())
+n= len(array)
+array.sort()
+result= linearsearch(array, n, k)
+if (result== -1):
+    print(array)
+    print("Element not found")
+else:
+    print(array)
+    print("Element found at index: ", result)
 
 
 ```
 ii)	# Find the element in a list using Binary Search(Iterative Method).
+
 ```
 
-
-
-
+#DEVELOPED BY : Vidhiya lakshmi S
+#REG NO:212223230238
+def binarySearchIter(lst, k, low, high):
+    while low<=high:
+        mid=low+(high-low)//2
+        if lst[mid]==k:
+            return mid
+        elif lst[mid]<k:
+            low=mid+1
+        else:
+            high=mid-1
+    return -1
+lst = eval(input())
+lst.sort()
+k = eval(input()) 
+print(lst)
+res=binarySearchIter(lst,k,0,len(lst)-1)
+if res==-1:
+    print("Element not found")
+else:
+    print("Element found at index: ",res)
 
 ```
 iii)	# Find the element in a list using Binary Search (recursive Method).
+
 ```
-
-
-
-
+#DEVELOPED BY : Vidhiya lakshmi S
+#REG NO:212223230238
+def binarySearchIter(lst, k, low, high):
+    while low<=high:
+        mid=low+(high-low)//2
+        if lst[mid]==k:
+            return mid
+        elif lst[mid]<k:
+            low=mid+1
+        else:
+            high=mid-1
+    return -1
+lst = eval(input())
+lst.sort()
+k = eval(input()) 
+print(lst)
+res=binarySearchIter(lst,k,0,len(lst)-1)
+if res==-1:
+    print("Element not found")
+else:
+    print("Element found at index: ",res)
 
 ```
 ## Sample Input and Output
 
+![Screenshot 2024-05-10 152720](https://github.com/saravidhya/Search-Algorithms/assets/87062069/ed9de4e7-46fe-4fcb-8c76-d5e85f8746bb)
 
 
+![Screenshot 2024-05-10 152734](https://github.com/saravidhya/Search-Algorithms/assets/87062069/eab4d3ca-b606-4a22-966a-4427caa4edbb)
+
+
+![Screenshot 2024-05-10 152753](https://github.com/saravidhya/Search-Algorithms/assets/87062069/20f917e2-dd7b-40ca-9cf1-985e3a2b4088)
 
 
 
